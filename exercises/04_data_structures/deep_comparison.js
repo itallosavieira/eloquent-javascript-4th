@@ -1,9 +1,7 @@
 const deepEqual = (a, b) => {
   if (a === b) return true;
-  
   let aKeys = Object.keys(a);
   let bKeys = Object.keys(b);
-
   for (let key of aKeys)  {
     if (!bKeys.includes(key) || !deepEqual(a[key], b[key])) 
       return false;
